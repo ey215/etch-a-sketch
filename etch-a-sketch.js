@@ -8,6 +8,7 @@ function addSquares(squares) {
     if (numBox > 0) {
       const content = document.createElement("div");
       content.textContent = numBox;
+      content.classList = "box";
       container.appendChild(content);
       numBox--;
     } else {
