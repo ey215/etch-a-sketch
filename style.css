@@ -1,8 +1,9 @@
 .container {
     display: grid;
-    height: 960px;
     width: 960px;
+    height: 960px;
     grid-template-columns: repeat(16, auto);
+    grid-template-rows: repeat(16, auto);
     border: 10px solid;
     border-color: black;
 }
