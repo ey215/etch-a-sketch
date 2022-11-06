@@ -16,4 +16,4 @@ function addSquares(squares) {
   }
 }
 
-addSquares(16);
+addSquares(32);
