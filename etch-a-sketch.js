@@ -1,19 +1,19 @@
-function addSquares() {
-const container = document.querySelector("container");
-const content = document.createElement.("div");
+function addSquares(squares) {
+  const container = document.querySelector("#container");
 
-let keepGoing = true;
-let numBox = 16;
+  let keepGoing = true;
+  let numBox = squares;
 
-while (keepGoing === true) {
+  while (keepGoing === true) {
     if (numBox > 0) {
-        content.textContent = numBox;
-        container.appendChild(content);
-        numBox--;
-        keepGoing = true;
+      const content = document.createElement("div");
+      content.textContent = numBox;
+      container.appendChild(content);
+      numBox--;
+    } else {
+      keepGoing = false;
     }
-    else {
-        keepGoing = false;
-    }
+  }
 }
-}
+
+addSquares(16);
