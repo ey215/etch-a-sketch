@@ -9,6 +9,7 @@ function addSquares(squares) {
       const content = document.createElement("div");
       content.textContent = numBox;
       content.classList = "box";
+      content.style.flex = "0 0 6.25%";
       container.appendChild(content);
       numBox--;
     } else {
