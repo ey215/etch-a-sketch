@@ -8,6 +8,5 @@
 }
 
 .box {
-    border-color: black;
-    min-width: 0;
+    border: 1px solid black;
 }
