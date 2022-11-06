@@ -2,7 +2,7 @@ function addSquares(squares) {
   const container = document.querySelector("#container");
 
   let keepGoing = true;
-  let numBox = squares;
+  let numBox = squares * squares;
 
   while (keepGoing === true) {
     if (numBox > 0) {
@@ -17,4 +17,4 @@ function addSquares(squares) {
   }
 }
 
-addSquares(32);
+addSquares(16);
