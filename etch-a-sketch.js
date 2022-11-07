@@ -10,6 +10,7 @@ function addSquares(squares) {
       content.textContent = numBox;
       content.classList = "box";
       content.style.flex = "0 0 6.25%";
+      content.id = "box";
       container.appendChild(content);
       numBox--;
     } else {
