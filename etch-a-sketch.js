@@ -3,12 +3,13 @@ function addSquares(squares) {
 
   let keepGoing = true;
   let numBox = squares * squares;
+  let percentSize = 100 / squares;
 
   while (keepGoing === true) {
     if (numBox > 0) {
       const content = document.createElement("div");
       content.classList = "box";
-      content.style.flex = "0 0 1%";
+      content.style.flex = "0 0 " + percentSize + "%";
       content.id = numBox;
       container.appendChild(content);
 
@@ -23,4 +24,4 @@ function addSquares(squares) {
   }
 }
 
-addSquares(100);
+addSquares(10);
