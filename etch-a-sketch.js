@@ -7,9 +7,8 @@ function addSquares(squares) {
   while (keepGoing === true) {
     if (numBox > 0) {
       const content = document.createElement("div");
-      content.textContent = numBox;
       content.classList = "box";
-      content.style.flex = "0 0 6.25%";
+      content.style.flex = "0 0 1%";
       content.id = numBox;
       container.appendChild(content);
 
@@ -24,4 +23,4 @@ function addSquares(squares) {
   }
 }
 
-addSquares(16);
+addSquares(100);
