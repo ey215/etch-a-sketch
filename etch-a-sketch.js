@@ -10,8 +10,13 @@ function addSquares(squares) {
       content.textContent = numBox;
       content.classList = "box";
       content.style.flex = "0 0 6.25%";
-      content.id = "box";
+      content.id = numBox;
       container.appendChild(content);
+
+      const boxes = document.getElementById(numBox);
+      boxes.addEventListener("mouseenter", (e) => {
+        e.target.style.backgroundColor = "orange";
+      });
       numBox--;
     } else {
       keepGoing = false;
