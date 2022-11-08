@@ -24,4 +24,9 @@ function addSquares(squares) {
   }
 }
 
+function changeSquares() {
+  let squares = prompt("How many squares per side?");
+  console.log(squares);
+}
+
 addSquares(10);
