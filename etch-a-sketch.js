@@ -30,7 +30,16 @@ function changeSquares() {
   while (userNumber < 1 || userNumber > 100) {
     userNumber = prompt("Number must be between 1 & 100");
   }
+  resetBox();
   addSquares(userNumber);
+}
+
+function resetBox() {
+  const content = document.getElementById("container");
+
+  while (content.firstChild) {
+    content.removeChild(content.firstChild);
+  }
 }
 
 addSquares(75);
