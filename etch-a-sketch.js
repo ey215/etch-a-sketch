@@ -25,12 +25,12 @@ function addSquares(squares) {
 }
 
 function changeSquares() {
-  let squares = prompt("How many squares per side?");
+  userNumber = prompt("How many squares per side?");
 
-  while (squares < 1 || squares > 100) {
-    squares = prompt("Number must be between 1 & 100");
+  while (userNumber < 1 || userNumber > 100) {
+    userNumber = prompt("Number must be between 1 & 100");
   }
-  console.log(squares);
+  addSquares(userNumber);
 }
 
-addSquares(10);
+addSquares(75);
