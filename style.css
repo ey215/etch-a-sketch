@@ -1,13 +1,29 @@
 .container {
-    display: grid;
-    width: 960px;
-    height: 960px;
-    grid-template-columns: repeat(16, auto);
-    grid-template-rows: repeat(16, auto);
-    border: 10px solid;
-    border-color: black;
+    display: flex;
+    width: 720px;
+    flex-wrap: wrap;
+    height: 720px;
+    
 }
 
 .box {
-    border: 1px solid black;
+    display: flex;
+    width: 100%;
+}
+
+.screen {
+border: 3px solid;
+height: 720px
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.box-button {
+    margin-bottom: 40px;
 }
