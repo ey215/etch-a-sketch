@@ -42,4 +42,4 @@ function resetBox() {
   }
 }
 
-addSquares(75);
+addSquares(16);
