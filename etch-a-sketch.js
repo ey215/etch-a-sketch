@@ -43,8 +43,8 @@ function resetBox() {
   }
 }
 
-function randomNumber(num) {
-  
+function randomNumber(min, max) {
+
 }
 
 addSquares(16);
