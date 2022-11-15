@@ -15,8 +15,8 @@ function addSquares(squares) {
 
       const boxes = document.getElementById(numBox);
       boxes.addEventListener("mouseenter", (e) => {
-        e.target.style.backgroundColor = "rgba(" + randomNumber(255) + ", " + randomNumber(255) + ", "
-        + randomNumber(255) + ", 1.0)";
+        e.target.style.backgroundColor = "rgba(" + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", "
+        + randomNumber(0, 256) + ", 1.0)";
       });
       numBox--;
     } else {
