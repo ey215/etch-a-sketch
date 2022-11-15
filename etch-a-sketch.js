@@ -43,4 +43,8 @@ function resetBox() {
   }
 }
 
+function randomNumber(num) {
+  
+}
+
 addSquares(16);
