@@ -44,7 +44,7 @@ function resetBox() {
 }
 
 function randomNumber(min, max) {
-
+  return Math.random(min, max) * (max - min) + min;
 }
 
 addSquares(16);
