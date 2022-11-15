@@ -15,7 +15,7 @@ function addSquares(squares) {
 
       const boxes = document.getElementById(numBox);
       boxes.addEventListener("mouseenter", (e) => {
-        e.target.style.backgroundColor = "orange";
+        e.target.style.backgroundColor = "rgba(0 , 0, 0, 1.0";
       });
       numBox--;
     } else {
