@@ -74,4 +74,8 @@ function colorChange() {
   }
 }
 
+function opacity() {
+  
+}
+
 addSquares(16);
