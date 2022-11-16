@@ -1,9 +1,12 @@
+let boxColor = "";
+
 function addSquares(squares) {
   const container = document.querySelector("#container");
 
   let keepGoing = true;
   let numBox = squares * squares;
   let percentSize = 100 / squares;
+  let boxId = "";
 
   while (keepGoing === true) {
     if (numBox > 0) {
@@ -16,10 +19,19 @@ function addSquares(squares) {
 
       const boxes = document.getElementById(numBox);
       boxes.addEventListener("mouseenter", (e) => {
-        let bgcolor = e.target.style.backgroundColor;
-        console.log(bgcolor);
-        e.target.style.backgroundColor = "rgba(" + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", "
-        + randomNumber(0, 256) + ", 1.0)";
+        
+        //get id of box on mousover and store in variable
+        boxId = e.target.id;
+        console.log(boxId);
+
+        //get backgroundcolor of box and store in variable
+        boxColor = e.target.style.backgroundColor;
+        console.log(boxColor);
+      
+
+        let boxToChange = document.getElementById(boxId);
+        boxToChange.style.backgroundColor = colorChange();
+
       });
       numBox--;
     } else {
@@ -47,7 +59,19 @@ function resetBox() {
 }
 
 function randomNumber(min, max) {
-  return Math.random(min, max) * (max - min) + min;
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); }
+
+function colorChange() {
+  if (boxColor === "rgba(255, 255, 255, 0)") {
+    //var colorGet =  "rgba(" + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", 1.0)";
+    var colorGet = "rgba(0, 0, 0, 0.1)";
+    return colorGet;
+  } 
+  else {
+    return boxColor;
+  }
 }
 
 addSquares(16);
