@@ -65,19 +65,41 @@ function randomNumber(min, max) {
 
 function colorChange() {
   if (boxColor === "rgba(255, 255, 255, 0)") {
-    //var colorGet =  "rgba(" + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", 1.0)";
-    var colorGet = "rgba(0, 0, 0, 0.1)";
+    //var colorGet =  "rgba(" + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", 1.0)"; 
+    let parts = boxColor.split(",");
+    let results = parts[3];
+    let opacityNumber = results.slice(0, -1);
+    console.log(opacityNumber);
+
+      if (opacityNumber < 1) {
+        opacityNumber = opacityNumber + 0.1;        
+      }
+      else {
+        opacityNumber = 1;
+      }
+    
+    var colorGet = "rgba(0, 0, 0, " +  opacityNumber + ")";
     opacity();
     return colorGet;
   } 
   else {
-    return boxColor;
+    
   }
 }
 
 function opacity() {
   let parts = boxColor.split(",");
-  console.log(parts);
+  let results = parts[3];
+  let opacityNumber = results.slice(0, -1);
+  console.log(opacityNumber);
+
+  if (opacityNumber < 1) {
+    opacityNumber = opacityNumber + 0.1;
+    return opacityNumber;
+  }
+  else {
+    return opacityNumber;
+  }
 }
 
 addSquares(16);
