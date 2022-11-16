@@ -5,6 +5,7 @@ function addSquares(squares) {
   let numBox = squares * squares;
   let percentSize = 100 / squares;
   let boxId = "";
+  let boxColor = "";
 
   while (keepGoing === true) {
     if (numBox > 0) {
