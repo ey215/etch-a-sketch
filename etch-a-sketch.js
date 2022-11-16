@@ -29,7 +29,7 @@ function addSquares(squares) {
       
 
         let boxToChange = document.getElementById(boxId);
-        boxToChange.style.backgroundColor = "rgb(" + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ")";
+        boxToChange.style.backgroundColor = colorChange();
 
       });
       numBox--;
@@ -59,6 +59,10 @@ function resetBox() {
 
 function randomNumber(min, max) {
   return Math.random(min, max) * (max - min) + min;
+}
+
+function colorChange() {
+  return "black";
 }
 
 addSquares(16);
