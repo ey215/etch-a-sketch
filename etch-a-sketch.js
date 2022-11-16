@@ -4,6 +4,7 @@ function addSquares(squares) {
   let keepGoing = true;
   let numBox = squares * squares;
   let percentSize = 100 / squares;
+  let boxId = "";
 
   while (keepGoing === true) {
     if (numBox > 0) {
@@ -16,10 +17,12 @@ function addSquares(squares) {
 
       const boxes = document.getElementById(numBox);
       boxes.addEventListener("mouseenter", (e) => {
-        let bgcolor = e.target.style.backgroundColor;
-        console.log(bgcolor);
-        e.target.style.backgroundColor = "rgba(" + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", "
-        + randomNumber(0, 256) + ", 1.0)";
+        boxId = e.target.id;
+        console.log(boxId);
+
+        let boxToChange = document.getElementById(boxId);
+        boxToChange.style.backgroundColor = "rgb(" + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ")";
+
       });
       numBox--;
     } else {
