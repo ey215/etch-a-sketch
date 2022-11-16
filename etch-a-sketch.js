@@ -70,7 +70,7 @@ function colorChange() {
     return colorGet;
   } 
   else {
-    return "orange";
+    return boxColor;
   }
 }
 
