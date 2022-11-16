@@ -17,8 +17,15 @@ function addSquares(squares) {
 
       const boxes = document.getElementById(numBox);
       boxes.addEventListener("mouseenter", (e) => {
+        
+        //get id of box on mousover and store in variable
         boxId = e.target.id;
         console.log(boxId);
+
+        //get backgroundcolor of box and store in variable
+        boxColor = e.target.style.backgroundColor;
+        console.log(boxColor);
+      
 
         let boxToChange = document.getElementById(boxId);
         boxToChange.style.backgroundColor = "rgb(" + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ")";
