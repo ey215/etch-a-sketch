@@ -59,12 +59,15 @@ function resetBox() {
 }
 
 function randomNumber(min, max) {
-  return Math.random(min, max) * (max - min) + min;
-}
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min) + min); }
 
 function colorChange() {
   if (boxColor === "rgba(255, 255, 255, 0)") {
-    return "black";
+    var colorGet =  "rgba(" + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", 1.0)";
+
+    return colorGet;
   } 
   else {
     return "orange";
