@@ -1,3 +1,5 @@
+let boxColor = "";
+
 function addSquares(squares) {
   const container = document.querySelector("#container");
 
@@ -5,7 +7,6 @@ function addSquares(squares) {
   let numBox = squares * squares;
   let percentSize = 100 / squares;
   let boxId = "";
-  let boxColor = "";
 
   while (keepGoing === true) {
     if (numBox > 0) {
@@ -62,7 +63,12 @@ function randomNumber(min, max) {
 }
 
 function colorChange() {
-  return "black";
+  if (boxColor === "rgba(255, 255, 255, 0)") {
+    return "black";
+  } 
+  else {
+    return "orange";
+  }
 }
 
 addSquares(16);
