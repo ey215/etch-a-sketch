@@ -48,11 +48,16 @@ function addSquares(squares) {
         }
 
         if (e.target.style.opacity) {
-          console.log('Opacity is'), e.target.style.opacity;
+            if (e.target.style.opacity < 1) {
+              e.target.style.opacity = e.target.style.opacity + 0.1;
+            }
+            else {
+              console.log(e.style.opacity);
+            }
         }
 
         else { 
-          e.target.style.opacity = "0.5";
+          e.target.style.opacity = "0.1";
         }
 
       });
