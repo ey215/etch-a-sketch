@@ -15,7 +15,6 @@ function addSquares(squares) {
       content.classList = "box";
       content.style.flex = "0 0 " + percentSize + "%";
       content.id = numBox;
-      content.style.backgroundColor = "blue";
       container.appendChild(content);
 
       const boxes = document.getElementById(numBox);
@@ -44,7 +43,8 @@ function addSquares(squares) {
 
         }
         else {
-          console.log('Css property is not contained in style');
+          e.target.style.backgroundColor = "black";
+          
         }
 
       });
