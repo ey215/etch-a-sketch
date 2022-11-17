@@ -47,6 +47,14 @@ function addSquares(squares) {
           
         }
 
+        if (e.target.style.opacity) {
+          console.log('Opacity is'), e.target.style.opacity;
+        }
+
+        else { 
+          e.target.style.opacity = "0.5";
+        }
+
       });
       numBox--;
     } else {
