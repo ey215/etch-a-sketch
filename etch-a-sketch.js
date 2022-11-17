@@ -1,4 +1,5 @@
 let boxColor = "";
+let boxOpacity = "";
 
 function addSquares(squares) {
   const container = document.querySelector("#container");
@@ -14,7 +15,7 @@ function addSquares(squares) {
       content.classList = "box";
       content.style.flex = "0 0 " + percentSize + "%";
       content.id = numBox;
-      content.style.backgroundColor = "rgba(255, 255, 255, 0.0)";
+      content.style.backgroundColor = "blue";
       container.appendChild(content);
 
       const boxes = document.getElementById(numBox);
@@ -25,12 +26,26 @@ function addSquares(squares) {
         console.log(boxId);
 
         //get backgroundcolor of box and store in variable
-        boxColor = e.target.style.backgroundColor;
-        console.log(boxColor);
+        //boxColor = e.target.style.backgroundColor;
+        //console.log(boxColor);
       
+        //boxOpacity = e.target.style.opacity;
+        //console.log(boxOpacity);
 
-        let boxToChange = document.getElementById(boxId);
-        boxToChange.style.backgroundColor = colorChange();
+        //if (boxColor === false || boxOpacity === false) {
+        
+        //let boxToChange = document.getElementById(boxId);
+        //boxToChange.style.backgroundColor = colorChange();
+        //boxToChange.style.opacity = opacityChange();
+        //}
+
+        if (e.target.style.backgroundColor) {
+          console.log('value is', e.target.style.backgroundColor);
+
+        }
+        else {
+          console.log('Css property is not contained in style');
+        }
 
       });
       numBox--;
@@ -64,10 +79,9 @@ function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min) + min); }
 
 function colorChange() {
-  if (boxColor === "rgba(255, 255, 255, 0)") {
+  if (boxColor === "rgb(255, 255, 255)") {
     //var colorGet =  "rgba(" + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", " + randomNumber(0, 256) + ", 1.0)";
-    var colorGet = "rgba(0, 0, 0, " + opacity() + ")";
-    opacity();
+    var colorGet = "rgb(0, 0, 0)";
     return colorGet;
   } 
   else {
@@ -75,20 +89,14 @@ function colorChange() {
   }
 }
 
-function opacity() {
-  let parts = boxColor.split(",");
-  let results = parts[3];
-  let opacityNumber = results.slice(0, -1);
-  console.log(opacityNumber);
-
-  if (opacityNumber < 1) {
-    opacityNumber = opacityNumber + 0.3;
-    return opacityNumber;
+function opacityChange() {
+  if (boxOpacity < 1) {
+    boxOpacity = boxOpacity + 0.1;
+    return boxOpacity;
   }
   else {
-    return opacityNumber;
+    return boxOpacity;
   }
 }
 
 addSquares(16);
-opacity
